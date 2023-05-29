@@ -8,6 +8,7 @@
   --buttons-hover-and-amount-color: #26c2ae;
   --error-color: #e17052;
   --input-bg-color: #f3f9fa;
+  --butons-focus: #9fe8df;
 }
 
 * {
@@ -117,6 +118,11 @@ h4 {
   color: var(--right-bg-and-buttons-percent-color);
   cursor: pointer;
   transition: 0.3s;
+  opacity: 0.3;
+}
+
+.active {
+  opacity: 1 !important;
 }
 
 .reset:hover {
@@ -146,6 +152,7 @@ h4 {
   mix-blend-mode: normal;
   opacity: 0.35;
   cursor: pointer;
+  background: none;
 }
 
 .error-text {
@@ -200,6 +207,15 @@ h2 {
   cursor: pointer;
 }
 
+.button_tip_percent:hover {
+  background-color: var(--buttons-hover-and-amount-color);
+}
+
+.button_tip_percent:focus {
+  background-color: var(--butons-focus);
+  color: var(--right-bg-and-buttons-percent-color);
+}
+
 .tip_custome {
   max-width: 117px;
   width: 100%;
@@ -207,10 +223,14 @@ h2 {
   outline: none;
   border: none;
   background-color: var(--input-bg-color);
-  font-size: 1.2em;
+  font-size: 1em;
   border-radius: 5px;
   cursor: pointer;
   color: var(--right-bg-and-buttons-percent-color);
+}
+
+.tip_custome:hover {
+  border: 2px solid var(--right-bg-and-buttons-percent-color);
 }
 
 .error_container {

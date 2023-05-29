@@ -27,16 +27,23 @@ function checkPeople() {
   if (persons_amount.value == 0) {
     errorText.classList.remove("hidden");
     errorBorderPe.classList.add("error_container");
-    errorTip.classList.remove("correct");
+    errorBorderPe.classList.remove("correct");
     persons_amount.classList.remove("opacity");
   } else {
     errorText.classList.add("hidden");
     errorBorderPe.classList.remove("error_container");
-    errorTip.classList.add("correct");
+    errorBorderPe.classList.add("correct");
     persons_amount.classList.add("opacity");
   }
 }
 
+custome.addEventListener("input", CheckTip);
+
+function CheckTip() {
+  if (custome.value > 100) {
+    custome.value = 100;
+  }
+}
 custome.addEventListener("input", Count);
 
 persons_amount.addEventListener("input", checkPeople);
@@ -51,7 +58,6 @@ function Count(e) {
   if (e.target.id === "custom" && e.target.value === "") {
     return;
   }
-
   var tip = e.target.value;
   if (persons_amount.value == "0" || tip_amount.value == "0") {
     alert("The filed are con't be 0");
@@ -71,7 +77,17 @@ function Count(e) {
     TipCountPerPerson = TipCount / personAmount;
     TotalBillCount = TipCount + tipAmount;
     TotalBillCountPerPerson = TotalBillCount / personAmount;
-    titAmount.innerHTML = "$" + " " + TipCountPerPerson.toFixed(2);
-    billTotal.innerHTML = "$" + " " + TotalBillCountPerPerson.toFixed(2);
+    titAmount.innerHTML = "$" + TipCountPerPerson.toFixed(2);
+    billTotal.innerHTML = "$" + TotalBillCountPerPerson.toFixed(2);
+    reset.classList.add("active");
   }
 }
+
+reset.addEventListener("click", () => {
+  tip_amount.value = "";
+  custome.value = "";
+  persons_amount.value = "";
+  titAmount.innerText = "$0.00";
+  billTotal.innerText = "$0.00";
+  reset.classList.remove("active");
+});
