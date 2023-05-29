@@ -138,7 +138,6 @@ h4 {
   width: 100%;
   border: none;
   outline: none;
-
   font-weight: 700;
   font-size: 1.2em;
   line-height: 36px;
@@ -147,6 +146,18 @@ h4 {
   mix-blend-mode: normal;
   opacity: 0.35;
   cursor: pointer;
+}
+
+.error-text {
+  color: var(--error-color);
+  position: absolute;
+  right: 0;
+  font-size: 0.8em;
+  top: -50%;
+}
+
+.hidden {
+  display: none;
 }
 
 .bill_bar img,
@@ -200,4 +211,20 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   color: var(--right-bg-and-buttons-percent-color);
+}
+
+.error_container {
+  border: 2px solid var(--error-color);
+}
+
+.focused {
+  background-color: red;
+}
+
+.correct {
+  border: 1px solid var(--buttons-hover-and-amount-color);
+}
+
+.opacity {
+  opacity: 1 !important;
 }

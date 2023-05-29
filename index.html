@@ -12,7 +12,6 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" type="text/css" href="/style.css" />
-
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -25,6 +24,7 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+    <script type="text/javascript" src="/script.js" defer></script>
   </head>
   <body>
     <main>
@@ -33,22 +33,23 @@
           <h1>Bill</h1>
           <div class="bill_bar">
             <img src="/images/icon-dollar.svg" alt="Amount of tip" />
-            <input type="number" class="bill_amount" placeholder="0" />
+            <input type="number" class="bill_amount" />
           </div>
         </div>
         <div class="tip_percent">
           <h2>Select Tip %</h2>
-          <button class="button_tip_percent">5%</button>
-          <button class="button_tip_percent">10%</button>
-          <button class="button_tip_percent">15%</button>
-          <button class="button_tip_percent">25%</button>
-          <button class="button_tip_percent">50%</button>
+          <button class="button_tip_percent" value="5">5%</button>
+          <button class="button_tip_percent" value="10">10%</button>
+          <button class="button_tip_percent" value="15">15%</button>
+          <button class="button_tip_percent" value="25">25%</button>
+          <button class="button_tip_percent" value="50">50%</button>
           <input type="number" class="tip_custome" placeholder="CUSTOM" />
         </div>
         <div class="people">
           <h3>Number of People</h3>
           <div class="people_bar">
             <img src="/images/icon-person.svg" alt="number of person" />
+            <span class="error-text hidden">Can't be zero</span>
             <input type="number" class="people_count" />
           </div>
         </div>
