@@ -27,13 +27,14 @@ Users should be able to:
 ### Screenshot
 
 image.png
+image.png
 
 **Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Alek371/tip_counter)
-- Live Site URL: [Add live site URL here](https://main--poetic-brigadeiros-2dd031.netlify.app)
+- Solution URL: [Git Repozitory](https://github.com/Alek371/tip_counter)
+- Live Site URL: [Live site URL](https://main--poetic-brigadeiros-2dd031.netlify.app)
 
 ## My process
 
@@ -46,5 +47,5 @@ image.png
 
 ## Author
 
-- Website - (https://portfolio-wosztyl.netlify.app/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Alek371)
+- Website - [Aleksander Wosztyl](https://portfolio-wosztyl.netlify.app/)
+- Frontend Mentor - [@Alek371](https://www.frontendmentor.io/profile/Alek371)
