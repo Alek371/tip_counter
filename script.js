@@ -15,11 +15,11 @@ function checkBill() {
   if (tip_amount.value != 0) {
     errorTip.classList.remove("error_container");
     errorTip.classList.add("correct");
-    tip_amount.classList.add("opacity");
+    tip_amount.classList.add("active");
   } else {
     errorTip.classList.add("error_container");
     errorTip.classList.remove("correct");
-    tip_amount.classList.remove("opacity");
+    tip_amount.classList.remove("active");
   }
 }
 
@@ -28,12 +28,12 @@ function checkPeople() {
     errorText.classList.remove("hidden");
     errorBorderPe.classList.add("error_container");
     errorBorderPe.classList.remove("correct");
-    persons_amount.classList.remove("opacity");
+    persons_amount.classList.remove("active");
   } else {
     errorText.classList.add("hidden");
     errorBorderPe.classList.remove("error_container");
     errorBorderPe.classList.add("correct");
-    persons_amount.classList.add("opacity");
+    persons_amount.classList.add("active");
   }
 }
 
@@ -47,8 +47,10 @@ function CheckTip() {
 custome.addEventListener("input", Count);
 
 persons_amount.addEventListener("input", checkPeople);
+persons_amount.addEventListener("input", Count);
 
 tip_amount.addEventListener("input", checkBill);
+tip_amount.addEventListener("input", Count);
 
 for (let i = 0; i < buttonTipPercent.length; i++) {
   buttonTipPercent[i].addEventListener("click", Count);
@@ -90,4 +92,11 @@ reset.addEventListener("click", () => {
   titAmount.innerText = "$0.00";
   billTotal.innerText = "$0.00";
   reset.classList.remove("active");
+  errorTip.classList.remove("error_container");
+  errorTip.classList.remove("correct");
+  errorBorderPe.classList.remove("error_container");
+  errorBorderPe.classList.remove("correct");
+  if (!errorText.classList.contains("hidden")) {
+    errorText.classList.add("hidden");
+  }
 });
