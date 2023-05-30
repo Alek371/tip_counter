@@ -17,6 +17,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
 }
 
 html {
@@ -31,8 +33,7 @@ body {
   min-height: 100vh;
   min-width: 100%;
   background-color: var(--bg-color);
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+
   gap: 5em;
 }
 
@@ -297,8 +298,13 @@ label {
     grid-column-end: 3;
   }
 
-  .bill_bar,
-  .people_bar {
-    padding: 0;
+  .bill_bar img,
+  .people_bar img {
+    left: 1em;
+  }
+
+  .tip_custome {
+    max-width: 100%;
+    width: 100%;
   }
 }
